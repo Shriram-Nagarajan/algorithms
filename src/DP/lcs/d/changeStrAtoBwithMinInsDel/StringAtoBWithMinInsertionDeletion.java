@@ -28,8 +28,14 @@ public class StringAtoBWithMinInsertionDeletion
         lcs = new LCSBottomUp();
         int lcsOfAB = lcs.lcs(a,b,lenA,lenB);
         
-        int insertions  = lenA-lcsOfAB;
-        int deletions = lenB-lcsOfAB;
+        int deletions  = lenA-lcsOfAB;
+        int insertions = lenB-lcsOfAB;
+        
         System.out.println("Insertions : "+insertions+", Deletions : "+deletions);
     }
+    
+    public static void main(String args[]) {
+    	new StringAtoBWithMinInsertionDeletion().printMinimumNumberOfInsertionDeletion("heap","pea");
+    }
+    
 }
