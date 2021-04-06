@@ -36,7 +36,7 @@ public class SCS
             Thus length of SCS = length(a)+length(b) - LCS(a,b)
          */
         return a.length()+b.length() - lcsHelper.lcs(a,b,a.length(),b.length());
-        //TODO print SCS
+        //print SCS available in DP.lcs.i.printSCS.PrintSCS
         //Printing is similar to print LCS. We take the top down dp and, print them if they are equal
         //also print if they are not equal depending on the direction we are moving
         //If any one string becomes empty, print the rest of the string
