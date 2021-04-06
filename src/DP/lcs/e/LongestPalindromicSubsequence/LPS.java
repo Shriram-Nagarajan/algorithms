@@ -26,19 +26,25 @@ public class LPS
         
         return lcs.lcs(X,xRev,X.length(),xRev.length());
         
-        //TODO : number of insertions to make a string palindrome
-        /*
-            To make a string palindrome
-            a="AEBCDBA"
-            we can either delete E,D or insert D,E on either side
-            String -> LPS
-                 (deletion/insertions)
-                 Number of insertions and number of deletions are same
-                 If we choose to delete we are gonna delete E,D
-                 If we choose to insert we are gonna insert E,D
-                 So in both cases return length(a) - LPS(a)
-         */
+    }
+    
+    //Number of insertions to make a string palindrome
+    /*
+        To make a string palindrome
+        a="AEBCDBA"
+        we can either delete E,D or insert D,E on either side
+        String -> LPS
+             (deletion/insertions)
+             Number of insertions and number of deletions are same
+             If we choose to delete we are gonna delete E,D
+             If we choose to insert we are gonna insert E,D
+             So in both cases return length(a) - LPS(a)
+     */
+    int numberOfInsertionsToMakeAStringPalindrome(String X){
+        
+    	return X.length()-maxLength(X);
         
     }
+    
     
 }
