@@ -5,6 +5,10 @@ import DP.lcs.a.lcs.LCSBottomUp;
 public class SCS
 {
     LCSBottomUp lcsHelper;
+    
+    //Note: printSCS available in DP.lcs.i.printSCS.PrintSCS
+    
+    
     int lengthOfSCS(String a, String b){
         lcsHelper = new LCSBottomUp();
         /*
@@ -37,8 +41,6 @@ public class SCS
          */
         return a.length()+b.length() - lcsHelper.lcs(a,b,a.length(),b.length());
         //print SCS available in DP.lcs.i.printSCS.PrintSCS
-        //Printing is similar to print LCS. We take the top down dp and, print them if they are equal
-        //also print if they are not equal depending on the direction we are moving
-        //If any one string becomes empty, print the rest of the string
+        
     }
 }

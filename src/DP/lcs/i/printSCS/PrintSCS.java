@@ -12,6 +12,9 @@ import DP.lcs.a.lcs.LCSBottomUp;
  */
 public class PrintSCS {
 
+	//Printing is similar to print LCS. We take the top down dp and, print them if they are equal
+    //also print if they are not equal depending on the direction we are moving
+    //If any one string becomes empty, print the rest of the string
 	public String printSCS(String X,String Y, int m,int n) {
 		
 		int dp[][] = new LCSBottomUp().lcsDP(X, Y, m, n);
@@ -20,6 +23,14 @@ public class PrintSCS {
 		int i = m;
 		int j = n;
 		
+		/**
+		 * Uses LCS - to print the common subsequence only once
+		 * Print all the other subsequences of both the strings
+		 * If char of string A doesn't match with that of B,
+		 * print the char of String with the longer LCS, and move in that direction
+		 * 
+		 * After the while loop print the left out characters of both the strings
+		 */
 		while(i > 0 && j > 0) {
 			
 			if(X.charAt(i-1) == Y.charAt(j-1)) {
