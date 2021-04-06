@@ -2,7 +2,8 @@ package DP.lcs.a.lcs;
 
 public class LCSBottomUp
 {
-    public int lcs(String X,String Y, int m,int n){
+	
+	public int[][] lcsDP(String X,String Y, int m,int n){
         int[][] dp = new int[m+1][n+1];
         /*
             In top down, we use the same approach of recursion
@@ -27,6 +28,11 @@ public class LCSBottomUp
             }
         }
         
+        return dp;
+    }
+	
+    public int lcs(String X,String Y, int m,int n){
+        int[][] dp = lcsDP(X, Y, m, n);
         return dp[m][n];
     }
     
