@@ -17,7 +17,7 @@
   - Shortest Common Supersequence - X.length()+Y.length() - lcs(X,Y)
   - Print SCS - similar to printLCS but collect even when characters dont match; print remaining characters
   - Longest Common Substring - same as LCS, but when char don't match, reset length to 0
-  - Longest Palindromic Substring - lcs(X, X.reverse())
+  - Longest Palindromic Subsequence - lcs(X, X.reverse())
     - Minimum number of insertions / deletions to convert X to Palindrome: len(X) - lps(X)
   - Minimum number of insertions / deletions to convert X to Y Del : len(X) - lcs(X,Y) Ins: len(Y) - lcs(X,Y)
   - Longest repeating subsequence - similar to lcs but add the count only when i != j
